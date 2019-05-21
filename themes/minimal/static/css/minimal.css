@@ -1,0 +1,686 @@
+/* minimal.css - A minimalistic style */
+
+/*
+  Reset margins. Leave everything else default.
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+.bg-light-red {
+  background-color: rgba(255,0,0,.25);
+}
+
+.bg-light-green {
+  background-color: rgba(0,255,0,.25);
+}
+
+
+/*
+  Always display a scrollbar by defining the overflow-y,
+  since we don't want the layout to jump if a scrollbar
+  is available or not.
+*/
+html {
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  font: 18px Lora, Georgia, serif;
+  font-weight: 400;
+  line-height: 24px;
+  background-color: #fff;
+  color: #333;
+}
+
+#container {
+  width: 700px;
+  margin: 0 auto;
+}
+
+#links {
+  border: 0;
+}
+
+#links a {
+  color: #a6a6a6;
+  text-decoration: none;
+}
+
+ 
+
+/*----------------------------*/
+/* Page Title                 */
+/*----------------------------*/
+
+#header {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-title {
+    font-family: Bitter, Georgia, serif;
+}
+
+/*----------------------------*/
+/* Menu                       */
+/*----------------------------*/
+
+/* 
+  Don't style header.
+*/
+#header h1 a,
+#header h1 a:hover, 
+#header h1 a:active,
+#header h1 a:visited
+{
+  color: #333;
+  text-decoration: none;
+}
+
+#header a.navigation-link, 
+#header a.navigation-link:active,
+#header a.navigation-link:visited
+{
+    color: #333;
+    text-decoration: none;
+}
+
+#header a.navigation-link:hover
+{
+    color: #002fc8;
+    text-decoration: none;
+}
+
+/* 
+  If we have a large screen, we want a simple horizontal 
+  navigation bar, so the items use display: inline with 
+  some padding after each list element.
+  
+  This is overriden in the media query below, so for small
+  screens we make a vertical navigation list out of it.
+*/
+
+.navigation {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-item {
+  display: inline-block;
+}
+
+ .blocklink {
+    display: block;
+}
+
+#links a,  
+#links a:visited, 
+#links a:active, 
+#links a:focus {
+  color: #a6a6a6;
+  text-decoration: none;
+}
+
+#links a:hover {
+  color: #6499ba;
+}
+
+/*------------------------------------------*/
+/* Documents                                */
+/*------------------------------------------*/
+
+ul.document {
+  list-style-type: none;
+  list-style-image: none;
+  margin: 0 0 1em 0;
+}
+
+li.document-downloads {
+  margin: 0.5em 0 0 0;
+}
+
+/*------------------------------------------*/
+/* Markup                                   */
+/*------------------------------------------*/
+
+b, strong {
+	font-weight: 700;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	padding: 28px 0 1px 45px;
+	quotes: "\201C" "\201D" "\2018" "\2019";
+	clear: both;
+	color: #777;
+}
+
+blockquote:before {
+  content: open-quote;
+  font-size: 4em;
+  float: left;
+  margin-left: -45px;
+  font-family: "times new roman";
+  color: #faa;
+  font-weight: bold;
+}
+
+/*------------------------------------------*/
+/* Archive                                  */
+/*------------------------------------------*/
+
+/* 
+  The idea for this simple, but nice design was adapted 
+  from: 
+  
+    * http://hackercodex.com 
+*/
+dl {
+  margin-bottom: 1em;
+}
+
+dt.article-date {
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+dd.article-title {
+  margin-left: 1.5em;
+}
+
+/*----------------------------*/
+/* Comments                   */
+/*----------------------------*/
+#comments {
+  background-color: #dee7ec;
+  padding: 1em;
+  margin-bottom: 1em;
+  clear: both;
+}
+
+.main-column {
+  clear: both;
+  overflow: hidden;
+}
+
+.content {
+  clear: both;
+  overflow: hidden;
+}
+
+div.clearer {
+  clear: both;
+  font-size: 0;
+  line-height: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+em.u {
+  font-style: normal;
+  text-decoration: underline;
+}
+
+em em.u {
+  font-style: italic;
+}
+
+/*----------------------------*/
+/* Tables                     */
+/*----------------------------*/
+
+table {
+    border-collapse: collapse;
+    padding: 0;
+    margin: 0 0 11px 0;
+    text-align: center;
+}
+
+table th {
+    border: 1px solid #8cacbb;
+    background-color: #dee7ec;
+    vertical-align: bottom;
+    padding: 0 10px 10px 10px;
+}
+
+table td {
+    border: 1px solid #8cacbb;
+    vertical-align: top;
+    padding: 10px;
+    text-align: center;
+}
+
+/*----------------------------*/
+/* Paragraphs                 */
+/*----------------------------*/
+
+hr {
+  border: 0px;
+  border-top: 1px solid #8cacbb;
+  text-align: center;
+  height: 0px;
+}
+
+/*----------------------------*/
+/* Syntax Highlightning       */
+/*----------------------------*/
+
+pre, 
+code {
+  font-family: Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+code {
+  font-size: 15px;
+}
+
+pre {
+  background: #f8f8f8; 
+  border: 1px dashed #d7d7c8;
+  line-height: 20px;
+  font-size: 14px;
+  overflow: auto; /* Do not reformat code, sorry you have to scroll! */
+  padding: 5px;
+}
+
+/*----------------------------*/
+/* Images                     */
+/*----------------------------*/
+
+img {
+  border: 0;
+  max-width: 100%;
+}
+
+img.mediacenter {
+  display: block;
+  margin: 0 auto;
+}
+
+img.medialeft {
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+
+img.mediaright {
+  float: right;
+  margin: 0 0 0 1.5em;
+}
+
+/*----------------------------*/
+/* Links                     */
+/*----------------------------*/
+
+article a {
+  color: #002fc8;
+  text-decoration: none;
+}
+
+article a:visited {
+  color: purple;
+  text-decoration: none;
+}
+
+article a:hover,
+article a:active {
+  color: #333;
+  text-decoration: underline;
+}
+
+/*----------------------------*/
+/* Icons                      */
+/*----------------------------*/
+
+.mediafile {
+  background: transparent url(../images/fileicons/file.png) 0px 1px no-repeat; 
+  padding-left: 18px; 
+  padding-bottom: 1px;
+}
+
+.gz { 
+  background-image: url(../images/fileicons/gz.png);
+}
+
+.pdf { 
+  background-image: url(../images/fileicons/pdf.png);
+}
+
+
+/*----------------------------*/
+/* Headlines                  */
+/*----------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: 0.5em;
+  font-family: Bitter, Georgia, serif;
+}
+
+h1 {
+	font-size: 26px;
+	line-height: 32px;
+	margin-bottom: 24px;
+	margin-top: 28px;
+}
+
+h2 {
+	font-size: 22px;
+	line-height: 28px;
+	margin-bottom: 24px;
+	margin-top: 28px;
+}
+
+h3 {
+	font-size: 18px;
+	line-height: 24px;
+	margin-bottom: 24px;
+	margin-top: 24px;
+}
+
+h4 {
+	font-size: 16px;
+	line-height: 20px;
+	margin-bottom: 12px;
+	margin-top: 24px;
+}
+
+h5 {
+	font-size: 14px;
+	line-height: 18px;
+	margin-bottom: 12px;
+	margin-top: 24px;
+}
+
+h6 {
+	font-size: 12px;
+	line-height: 16px;
+	margin-bottom: 0;
+	margin-top: 24px;
+}
+
+/*
+  Special margins and font for title and byline.
+*/
+.title { margin-bottom: 0.25em; }
+
+.byline {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+/*----------------------------*/
+/* Lists                      */
+/*----------------------------*/
+
+ul {
+  list-style-type: square;
+  list-style-image: none;
+  margin: 0 0 1em 3.5em;
+}
+
+ol {
+  list-style-image: none;
+  margin: 0 0 1em 3.5em;
+}
+
+/* 
+  No bottom gap in between and smaller left margin 
+  for nested lists 
+*/
+li ul,
+li ol {
+  margin: 0 0 0 1.5em;
+}
+
+ol { list-style-type: decimal; }
+ol ol { list-style-type: upper-roman; }
+ol ol ol { list-style-type: lower-alpha; }
+ol ol ol ol { list-style-type: lower-greek; }
+
+ul.posts span {
+  font-family: Monaco, "Courier New", monospace;
+}
+
+/*----------------------------*/
+/* Margins                    */
+/*----------------------------*/
+
+hr,
+p,
+ul,
+ol,
+dd,
+blockquote,
+address,
+pre,
+table {
+	margin-bottom: 29px;
+}  
+
+/*----------------------------*/
+/* Media Queries              */
+/*----------------------------*/
+@media screen and (min-width: 780px) {
+    
+    #menu {
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+		line-height: 54px;
+    }
+    
+    article {
+        font-size: 17px;
+        line-height: 28px;
+    }
+    
+    .byline {
+        font-size: 16px;
+    }
+    
+    .title {
+        font-size: 34px;
+    }
+	
+	.blocklink {
+	  padding-left: 20px;
+      padding-right: 20px;
+	}
+
+	h1 {
+		font-size: 34px;
+		line-height: 44px;
+		margin-bottom: 28px;
+		margin-top: 28px;
+	}
+    
+	h2 {
+		font-size: 28px;
+		line-height: 36px;
+		margin-bottom: 28px;
+		margin-top: 28px;
+	}
+    
+	h3 {
+		font-size: 24px;
+		line-height: 30px;
+		margin-bottom: 28px;
+		margin-top: 28px;
+	}
+    
+	h4 {
+		font-size: 22px;
+		line-height: 28px;
+		margin-bottom: 28px;
+		margin-top: 28px;
+	}
+    
+	h5 {
+		font-size: 20px;
+		line-height: 26px;
+		margin-bottom: 14px;
+		margin-top: 28px;
+	}
+    
+	h6 {
+		font-size: 18px;
+		line-height: 24px;
+		margin-bottom: 7px;
+		margin-top: 28px;
+	}
+
+	
+	hr,
+	p,
+	ul,
+	ol,
+	dd,
+	blockquote,
+	address,
+	pre,
+	table {
+		margin-bottom: 28px;
+	}  
+
+}
+
+/*
+  Mobile
+*/
+@media only screen and (max-width: 780px) {
+ 
+  /* Turn the absolute width into a percentage at this point. */
+  #container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  #menu {
+    border-top: 1px solid #333;
+    font-size: 18px;
+    line-height: 36px;
+  }
+  
+  .page-title {
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  
+  .page-title-link {
+    display: block;
+	padding: 0;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+  }
+  
+  article {
+    font-size: 18px; 
+    line-height: 29px; 
+    margin-bottom: 29px
+  }
+
+  /*
+    Don't show the bottom links, since the occupy too much 
+    space on small devices (and may look ugly!).
+  */
+  #links {
+    display: none !important;
+  }
+  
+  /*
+    Define the blocklink now, which turns the menu items
+    into a block link, which is easy to hit with a touch 
+    device.
+  */
+  .blocklink {
+    display: block;
+	padding: 0;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+  }
+
+  /*
+    Display the links in the menu as block and remove 
+    padding and border for it.
+  */
+  .navigation, .navigation-item {
+    display: block;
+    color: #638c9c;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  
+  /*
+    Center each navigation item. 
+  */
+  li.navigation-item {
+    text-align: center;
+    border-bottom: 1px solid black;
+  }
+  
+  /* 
+    The blog archive looks crap on small devices, so let's
+    display the information centered without floating.
+  */
+  h2.article-year {
+    text-align: center;
+  }
+  
+  dt.article-date {
+    text-align: center;
+  }
+
+  dd.article-title {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+/* Do not show header/footer for print */
+@media only print {
+  
+  /*
+    You don't want the comments, menu, page-title or 
+    footer links when printing a page. Don't display 
+    them.
+  */
+  #comments, #header, #links {
+    display: none !important;
+  }
+  
+  .footer {
+      display: none !important;
+  }
+  
+  #container {
+    width: 780px;
+  }
+}
